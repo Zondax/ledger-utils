@@ -1,1 +1,1 @@
-ledger-apdu-codes
+ledger-utils

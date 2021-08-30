@@ -1,0 +1,50 @@
+{
+  "name": "@zondax/ledger-utils",
+  "author": "Zondax GmbH",
+  "license": "Apache-2.0",
+  "version": "0.0.0",
+  "description": "Ledger utils package",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/zondax/ledger-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zondax/ledger-utils.git"
+  },
+  "keywords": [
+    "Zondax",
+    "Ledger",
+    "Utils"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "yarn build && jest"
+  },
+  "bugs": {
+    "url": "https://github.com/zondax/ledger-utils/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.28.3",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  },
+  "moduleDirectories": [
+    "node_modules",
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
