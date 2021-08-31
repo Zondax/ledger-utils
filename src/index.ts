@@ -1,3 +1,3 @@
-import { getCodeDescription } from './codes'
+import { getCodeDescription } from './apdu'
 
-export default { getCodeDescription }
+export const apdu = { getCodeDescription }

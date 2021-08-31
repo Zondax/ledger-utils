@@ -4,28 +4,12 @@ interface Code {
   isOk?: true
 }
 
-interface GetCodeDescriptionResult {
+export interface GetCodeDescriptionResult {
   description: string
   isOk: boolean
 }
 
-const codes: Readonly<Code[]> = [
-  {
-    code: '0x6',
-    description: 'Class not supported.',
-  },
-  {
-    code: '0x61—',
-    description: 'Response bytes still available',
-  },
-  {
-    code: '0x61XX',
-    description: 'Command successfully executed; ‘XX’ bytes of data are available and can be requested using GET RESPONSE.',
-  },
-  {
-    code: '0x62—',
-    description: 'State of non-volatile memory unchanged',
-  },
+export const codes: Readonly<Code[]> = [
   {
     code: '0x6200',
     description: 'No information given (NV-Ram not changed)',
@@ -63,10 +47,6 @@ const codes: Readonly<Code[]> = [
     description: 'Card locked (during reset( ))',
   },
   {
-    code: '0x62CX',
-    description: 'Counter with value x (command dependent)',
-  },
-  {
     code: '0x62F1',
     description: 'Wrong C-MAC',
   },
@@ -89,18 +69,6 @@ const codes: Readonly<Code[]> = [
   {
     code: '0x62F9',
     description: 'CALC Key Set not unblocked',
-  },
-  {
-    code: '0x62FX',
-    description: '–',
-  },
-  {
-    code: '0x62XX',
-    description: 'RFU',
-  },
-  {
-    code: '0x63—',
-    description: 'State of non-volatile memory changed',
   },
   {
     code: '0x6300',
@@ -159,10 +127,6 @@ const codes: Readonly<Code[]> = [
     description: 'Verify fail, 3 tries left.',
   },
   {
-    code: '0x63CX',
-    description: 'The counter has reached the value ‘x’ (0 = x = 15) (command dependent).',
-  },
-  {
     code: '0x63F1',
     description: 'More data expected.',
   },
@@ -171,32 +135,12 @@ const codes: Readonly<Code[]> = [
     description: 'More data expected and proactive command pending.',
   },
   {
-    code: '0x63FX',
-    description: '–',
-  },
-  {
-    code: '0x63XX',
-    description: 'RFU',
-  },
-  {
-    code: '0x64—',
-    description: 'State of non-volatile memory unchanged',
-  },
-  {
     code: '0x6400',
     description: 'No information given (NV-Ram not changed)',
   },
   {
     code: '0x6401',
     description: 'Command timeout. Immediate response required by the card.',
-  },
-  {
-    code: '0x64XX',
-    description: 'RFU',
-  },
-  {
-    code: '0x65—',
-    description: 'State of non-volatile memory changed',
   },
   {
     code: '0x6500',
@@ -210,18 +154,6 @@ const codes: Readonly<Code[]> = [
   {
     code: '0x6581',
     description: 'Memory failure',
-  },
-  {
-    code: '0x65FX',
-    description: '–',
-  },
-  {
-    code: '0x65XX',
-    description: 'RFU',
-  },
-  {
-    code: '0x66—',
-    description: '',
   },
   {
     code: '0x6600',
@@ -248,24 +180,8 @@ const codes: Readonly<Code[]> = [
     description: 'Incorrect Encryption/Decryption Padding',
   },
   {
-    code: '0x66XX',
-    description: '–',
-  },
-  {
-    code: '0x67—',
-    description: '',
-  },
-  {
     code: '0x6700',
     description: 'Wrong length',
-  },
-  {
-    code: '0x67XX',
-    description: 'length incorrect (procedure)(ISO 7816-3)',
-  },
-  {
-    code: '0x68—',
-    description: 'Functions in CLA not supported',
   },
   {
     code: '0x6800',
@@ -286,18 +202,6 @@ const codes: Readonly<Code[]> = [
   {
     code: '0x6884',
     description: 'Command chaining not supported',
-  },
-  {
-    code: '0x68FX',
-    description: '–',
-  },
-  {
-    code: '0x68XX',
-    description: 'RFU',
-  },
-  {
-    code: '0x69—',
-    description: 'Command not allowed',
   },
   {
     code: '0x6900',
@@ -360,18 +264,6 @@ const codes: Readonly<Code[]> = [
     description: 'Permission Denied – Missing Privilege',
   },
   {
-    code: '0x69FX',
-    description: '–',
-  },
-  {
-    code: '0x69XX',
-    description: 'RFU',
-  },
-  {
-    code: '0x6A—',
-    description: 'Wrong parameter(s) P1-P2',
-  },
-  {
     code: '0x6A00',
     description: 'No information given (Bytes P1 and/or P2 are incorrect)',
   },
@@ -424,64 +316,20 @@ const codes: Readonly<Code[]> = [
     description: 'Wrong parameter value',
   },
   {
-    code: '0x6AFX',
-    description: '–',
-  },
-  {
-    code: '0x6AXX',
-    description: 'RFU',
-  },
-  {
-    code: '0x6B—',
-    description: '',
-  },
-  {
     code: '0x6B00',
     description: 'Wrong parameter(s) P1-P2',
-  },
-  {
-    code: '0x6BXX',
-    description: 'Reference incorrect (procedure byte), (ISO 7816-3)',
-  },
-  {
-    code: '0x6C—',
-    description: 'Wrong length Le',
   },
   {
     code: '0x6C00',
     description: 'Incorrect P3 length.',
   },
   {
-    code: '0x6CXX',
-    description: 'Bad length value in Le; ‘xx’ is the correct exact Le',
-  },
-  {
-    code: '0x6D—',
-    description: '',
-  },
-  {
     code: '0x6D00',
     description: 'Instruction code not supported or invalid',
   },
   {
-    code: '0x6DXX',
-    description: 'Instruction code not programmed or invalid (procedure byte), (ISO 7816-3)',
-  },
-  {
-    code: '0x6E—',
-    description: '',
-  },
-  {
     code: '0x6E00',
     description: 'Class not supported',
-  },
-  {
-    code: '0x6EXX',
-    description: 'Instruction class not supported (procedure byte), (ISO 7816-3)',
-  },
-  {
-    code: '0x6F—',
-    description: 'Internal exception',
   },
   {
     code: '0x6F00',
@@ -490,14 +338,6 @@ const codes: Readonly<Code[]> = [
   {
     code: '0x6FFF',
     description: 'Card dead (overuse, …)',
-  },
-  {
-    code: '0x6FXX',
-    description: 'No precise diagnosis (procedure byte), (ISO 7816-3)',
-  },
-  {
-    code: '0x9-—',
-    description: '',
   },
   {
     code: '0x9000',
@@ -613,10 +453,6 @@ const codes: Readonly<Code[]> = [
     description: 'Unrecoverable error within file',
   },
   {
-    code: '0x920x',
-    description: 'Writing to EEPROM successful after ‘x’ attempts.',
-  },
-  {
     code: '0x9210',
     description: 'Insufficient memory. No more storage available.',
   },
@@ -646,11 +482,7 @@ const codes: Readonly<Code[]> = [
   },
   {
     code: '0x9402',
-    description: 'Candidate amount too high',
-  },
-  {
-    code: '0x9402',
-    description: 'Address range exceeded.',
+    description: 'Candidate amount too high / Address range exceeded.',
   },
   {
     code: '0x9403',
@@ -674,11 +506,7 @@ const codes: Readonly<Code[]> = [
   },
   {
     code: '0x9408',
-    description: 'R3bc currency not supported in purse engine',
-  },
-  {
-    code: '0x9408',
-    description: 'Selected file type does not match command.',
+    description: 'Selected file type does not match command./R3bc currency not supported in purse engine',
   },
   {
     code: '0x9580',
@@ -976,21 +804,13 @@ const codes: Readonly<Code[]> = [
     code: '0x9F04',
     description: 'PIN not succesfully verified, PIN blocked and Unblock Try Counter is 3',
   },
-  {
-    code: '0x9FXX',
-    description: 'Command successfully executed; ‘xx’ bytes of data are available and can be requested using GET RESPONSE.',
-  },
-  {
-    code: '0x9xXX',
-    description: 'Application related status, (ISO 7816-3)',
-  },
 ]
 
 export const getCodeDescription = (code: number): GetCodeDescriptionResult => {
-  const stringCode = `0x${code.toString(16)}`
+  const stringCode = `0x${code.toString(16).toUpperCase()}`
 
   const found = codes.find(({ code: c }) => stringCode == c)
-  if (!found) throw new Error('Code not found')
+  if (!found) throw new Error(`code ${stringCode} not found`)
 
   return { description: found.description, isOk: !!found.isOk }
 }
